@@ -104,7 +104,7 @@ See [SECURITY.md](../SECURITY.md). The essential controls are private-by-default
 
 ## Testing and results
 
-Verified locally on 2026-10-25: TypeScript project check passed; ESLint passed; Vitest passed 4 utility and upload-validation tests; Vite production build passed with split bundles; the built preview returned HTTP 200 for `/`, `/about`, `/app`, `/robots.txt`, `/sitemap.xml`, and `/favicon.svg`. These checks do not prove cloud integration. A Supabase project was subsequently created and the schema/storage migration was applied successfully in SQL Editor on 2026-10-25. Cloud auth, database persistence through the app, storage upload/download isolation, share expiry/revocation, and cross-user access tests remain outstanding because the frontend has not yet been deployed and configured against the project.
+Verified locally on 2026-10-25: TypeScript project check passed; ESLint passed; Vitest passed 4 utility and upload-validation tests; Vite production build passed with split bundles; the built preview returned HTTP 200 for `/`, `/about`, `/app`, `/robots.txt`, `/sitemap.xml`, and `/favicon.svg`. These checks do not prove cloud integration. The Supabase project is healthy in Mumbai, and its schema/storage migration was applied successfully in SQL Editor. On 2026-10-26, Vercel production deployment became Ready at `https://cloud-vault-vert.vercel.app`; the Supabase client URL, publishable key, and canonical site URL were configured in Vercel and a production redeploy completed successfully. The landing page and signup form were opened, and the live sitemap and robots.txt were verified. Supabase Auth Site URL and production redirect allowlist were updated. Account creation, email confirmation, database persistence through the app, storage upload/download isolation, share expiry/revocation, and cross-user access have not yet been tested. The `public-share-download` Edge Function has not yet been deployed, so public share downloads are not complete.
 
 ## Deployment procedure
 
@@ -122,7 +122,7 @@ Add resumable large uploads, preview/transcoding, MFA, quota enforcement per use
 
 ## Conclusion
 
-CloudVault presents a concrete cloud file workflow built around identity, database RLS, object storage, server-side share validation, and static hosting. Cloud properties are visible in the architecture and security boundary; production deployment and account-isolation tests require the owner's provider setup.
+CloudVault presents a concrete cloud file workflow built around identity, database RLS, object storage, server-side share validation, and static hosting. The frontend is publicly deployed and configured to connect to the owner's Supabase project. Full cloud operation still depends on deploying the share Edge Function and performing account-isolation and storage workflow tests.
 
 ## References
 
