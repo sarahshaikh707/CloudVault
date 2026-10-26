@@ -6,7 +6,7 @@
 2. Execute `supabase/migrations/202610250001_cloudvault.sql` in Supabase SQL Editor. Confirm the `vault-files` bucket is private and has a 25 MB per-object cap.
 3. Enable email/password under Authentication providers. Configure the confirmation and password-reset email templates.
 4. Under Auth URL Configuration, set the Site URL to `https://cloud-vault-vert.vercel.app`; add `https://cloud-vault-vert.vercel.app/**` and `http://localhost:5173/**` to allowed redirect URLs. The production Site URL and production redirect have been configured; add localhost only if you need local development.
-5. Install the Supabase CLI, authenticate, link the project, and deploy `public-share-download`. Keep the service role key in Supabase's server-side function secrets only. The hosted function uses a service key because share visitors are anonymous; it exposes only one matching file and returns a URL valid for 60 seconds. This function is not yet deployed.
+5. Deploy `public-share-download` from a terminal on a machine with internet access. From the repository folder, run `npx supabase@latest login` (create a personal access token in Supabase Account → Access Tokens and enter it only in the local terminal prompt), then `npx supabase@latest link --project-ref jfbjbxapjupglhdrixvc`, then `npx supabase@latest functions deploy public-share-download --project-ref jfbjbxapjupglhdrixvc --use-api`. Do not paste the access token into chat or commit it. The function uses Supabase's server-side `SUPABASE_SERVICE_ROLE_KEY` injected by the platform; never put it in Vercel `VITE_` variables or frontend code. The function exposes only the file matched by a valid share token and returns a URL valid for 60 seconds. This function is not yet deployed.
 
 ## 2. Configure Vercel
 
