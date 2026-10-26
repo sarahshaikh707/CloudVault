@@ -16,7 +16,14 @@
 4. Deploy and open the provided Vercel URL. Add that exact origin to Supabase Auth's redirect URL allowlist.
 5. Test registration, email confirmation, login, upload/download/delete, create a time-limited share, revoke it, and check the expired/revoked share route.
 
-No provider account was connected for this task, so no cloud resource or deployment has been created yet. Free plans may pause inactive projects or change quotas; check provider pricing and usage before launch. Vercel's current Hobby terms restrict use to personal or non-commercial projects. Do not add billing or purchase a domain unless you choose to.
+## Current deployment status (2026-10-26)
+
+- Supabase project `jfbjbxapjupglhdrixvc` exists and is healthy in the Mumbai region.
+- The SQL migration was run successfully in Supabase SQL Editor on 2026-10-25. It created the RLS-protected tables and private `vault-files` bucket.
+- The source is committed locally on branch `main` (commit `4fb5fcc`, merged with the existing README-only GitHub history in `2a31293`). The push did not complete because Git Credential Manager reported that its sign-in dialog was cancelled; the remote GitHub branch still needs the push.
+- No Vercel project or public deployment URL exists yet. The Edge Function, production environment variables, and production Auth redirect URLs still need configuration.
+
+Free plans may pause inactive projects or change quotas; check provider pricing and usage before launch. Vercel's Hobby terms restrict use to personal or non-commercial projects. Do not add billing or purchase a domain unless you choose to.
 
 ## 3. Confirm production behavior
 

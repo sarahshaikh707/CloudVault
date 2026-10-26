@@ -104,7 +104,7 @@ See [SECURITY.md](../SECURITY.md). The essential controls are private-by-default
 
 ## Testing and results
 
-Verified locally on 2026-10-25: TypeScript project check passed; ESLint passed; Vitest passed 4 utility and upload-validation tests; Vite production build passed with split bundles; the built preview returned HTTP 200 for `/`, `/about`, `/app`, `/robots.txt`, `/sitemap.xml`, and `/favicon.svg`. These checks do not prove cloud integration. Cloud auth, database persistence, storage access isolation, share expiry/revocation, and cross-user access tests require a configured Supabase project and two test accounts; no provider was connected for this run, so those tests remain outstanding.
+Verified locally on 2026-10-25: TypeScript project check passed; ESLint passed; Vitest passed 4 utility and upload-validation tests; Vite production build passed with split bundles; the built preview returned HTTP 200 for `/`, `/about`, `/app`, `/robots.txt`, `/sitemap.xml`, and `/favicon.svg`. These checks do not prove cloud integration. A Supabase project was subsequently created and the schema/storage migration was applied successfully in SQL Editor on 2026-10-25. Cloud auth, database persistence through the app, storage upload/download isolation, share expiry/revocation, and cross-user access tests remain outstanding because the frontend has not yet been deployed and configured against the project.
 
 ## Deployment procedure
 
