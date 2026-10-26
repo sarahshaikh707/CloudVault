@@ -20,7 +20,7 @@
 
 - Supabase project `jfbjbxapjupglhdrixvc` exists and is healthy in the Mumbai region.
 - The SQL migration was run successfully in Supabase SQL Editor on 2026-10-25. It created the RLS-protected tables and private `vault-files` bucket.
-- The source is committed locally on branch `main` (commit `4fb5fcc`, merged with the existing README-only GitHub history in `2a31293`). The push did not complete because Git Credential Manager reported that its sign-in dialog was cancelled; the remote GitHub branch still needs the push.
+- The source is pushed to `sarahshaikh707/CloudVault`, branch `main` (latest verified commit `80642bad783e2505534f5d0c46578354e4fdf9ea`).
 - No Vercel project or public deployment URL exists yet. The Edge Function, production environment variables, and production Auth redirect URLs still need configuration.
 
 Free plans may pause inactive projects or change quotas; check provider pricing and usage before launch. Vercel's Hobby terms restrict use to personal or non-commercial projects. Do not add billing or purchase a domain unless you choose to.
