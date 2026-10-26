@@ -23,6 +23,7 @@
 - The source is pushed to `sarahshaikh707/CloudVault`, branch `main` (deployment source commit `dc8d3d988ee0b41e2fa11ea59175928a6956b476`).
 - Vercel production deployment is Ready at `https://cloud-vault-vert.vercel.app`. Production Supabase URL, publishable key, and site URL are configured in Vercel. The public landing page, signup form, robots.txt, and sitemap.xml have been opened and verified.
 - Supabase Auth Site URL and allowed production redirect are configured for the Vercel domain. The private storage bucket and migration are in place.
+- Google Search Console URL-prefix property for `https://cloud-vault-vert.vercel.app/` has been verified using an HTML meta tag. Google accepted `sitemap.xml` with status Success and discovered 3 public pages. The home URL currently reports “Discovered - currently not indexed”; the live URL test/indexing request is still processing. Google controls crawl timing and indexing.
 - Remaining provider setup: deploy the `public-share-download` Supabase Edge Function with the CLI. Until then, public share downloads are not complete. End-to-end signup, email confirmation, file operations, expiration/revocation, and cross-user isolation still need manual testing with two accounts.
 
 Free plans may pause inactive projects or change quotas; check provider pricing and usage before launch. Vercel's Hobby terms restrict use to personal or non-commercial projects. Do not add billing or purchase a domain unless you choose to.
